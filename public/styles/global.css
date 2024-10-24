@@ -173,5 +173,8 @@ h3 {
 a {
   color: var(--title-color);
 }
+a:hover {
+  color: var(--color-2);
+}
 
 /* --- */
