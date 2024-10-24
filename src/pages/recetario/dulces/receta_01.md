@@ -1,5 +1,5 @@
 ---
-layout: ../../layouts/RecetaLayout.astro
+layout: ../../../layouts/RecetaLayout.astro
 title: "Arroz con leche"
 category: "dulce"
 subcategory: "postre"

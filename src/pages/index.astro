@@ -1,7 +1,88 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
-const pageTitle = "Las recetas de Po"
+import "../../public/styles/global.css"
+const pageTitle = "Las recetas de Po"
 ---
 
 <BaseLayout pageTitle={pageTitle}>
-</BaseLayout>
+	  <h1>{pageTitle}</h1>
+	<div class="flex">
+	  <div class="imagen">
+		<img
+		  src="../../images/The_Swedish_Chef.webp"
+		  alt="Swedish Chef from the Muppet's show"
+		/>
+	  </div>
+	  <div class="food-categ salados">
+		<a href="/saladas"><h2>platos salados</h2></a>
+		<h3>carnes</h3>
+		<h3>pastas</h3>
+		<h3>tartas</h3>
+		<h3>pan</h3>
+		<h3>pizza</h3>
+	  </div>
+	  <div class="food-categ dulces">
+		<a href="/dulces"><h2>platos dulces</h2></a>
+		<h3>postres</h3>
+		<h3>tortas</h3>
+		<h3>galletas</h3>
+		<h3>facturas</h3>
+	  </div>
+	</div>
+  </BaseLayout>
+  
+  <style>
+	img {
+	  mask-image: linear-gradient(black 97%, transparent);
+	  max-width: 80%;
+	  height: auto;
+	  /* transition: transform .75s;*/
+	}
+	img:hover {
+	  transform: scaleX(-1);
+	}
+	.food-categ {
+	  padding: 1em;
+	  text-align: center;
+	}
+	.food-categ a{
+		text-decoration: none;
+	}
+	.food-categ a:hover{
+		color: var(--color-2);
+	}
+	.imagen {
+	  display: flex;
+	  justify-content: center;
+	  align-items: flex-end;
+	}
+	.flex {
+	  display: flex;
+	  flex-direction: column;
+	  max-width: 90%;
+	  margin: 0 auto;
+	}
+  
+	@media screen and (min-width: 636px) {
+	  /* probar: min-width: 40vw */
+	  .flex {
+		flex-direction: row;
+	  }
+  
+	  .imagen {
+		flex-grow: 1;
+		order: 2;
+	  }
+	  .food-categ {
+		margin-top: 3em;
+		flex-grow: 3;
+	  }
+	  .salados {
+		order: 0;
+	  }
+	  .dulces {
+		order: 2;
+	  }
+	}
+  </style>
+  

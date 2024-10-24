@@ -1,16 +1,16 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 const pageTitle = "Las recetas de Po";
-const listaRecetas = await Astro.glob("../pages/recetario/*.md");
+const listaSaladas = await Astro.glob("../pages/recetario/saladas/*.md");
 
-// Astro.glob es una función asíncrona que retorna una promesa. Busca los archivos que cumplan con los criterios que pasemos como parámetros (en este caso, todas las recetas).
+// Astro.glob es una función asíncrona que retorna una promesa. Busca los archivos que cumplan con los criterios que pasemos como parámetros (en este caso, todas las recetas saladas).
 ---
 
-<!-- En esta página recetas.astro se listan los archivos .md que están en pages/recetario -->
+<!-- En esta página recetas.astro se listan los archivos .md que están en pages/recetario/saladas -->
 <BaseLayout pageTitle={pageTitle}>
   <ul class="lista-recetas">
     {
-      listaRecetas.map((receta) => (
+      listaSaladas.map((receta) => (
         <li>
           <a href={receta.url}>{receta.frontmatter.title}</a>
         </li>

@@ -1,5 +1,5 @@
 ---
-layout: ../../layouts/RecetaLayout.astro
+layout: ../../../layouts/RecetaLayout.astro
 title: "Budín de naranja"
 category: "dulce"
 subcategory: "torta"

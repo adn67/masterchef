@@ -1,20 +1,18 @@
 ---
-title: "Torta del diablo"
-category: "dulce"
-subcategory: "torta"
-ingredients: ["cacao", "harina", "azúcar", "huevos", "aceite"]
-tags: ["torta", "cacao"]
+layout: ../../../layouts/RecetaLayout.astro
+title: "Tarta de alcauciles"
+category: "salada"
+subcategory: "tarta"
+ingredients: ["alcauciles", "huevos", "aceite"]
+tags: ["tarta", "alcauciles"]
 ---
 
-## Torta del diablo
 
 ### Ingredientes
 
-- cacao amargo
-- harina leudante:  tazas
-- azúcar: 1 taza
-- huevos: 3
-- aceite neutro (girasol o maíz): 1 taza
+- alcauciles
+- etc.
+- etc.
 <br><br><br>
 
 ### Procedimiento
