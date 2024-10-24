@@ -1,0 +1,77 @@
+---
+import "/public/styles/global.css";
+---
+
+<nav>
+  <ul class="nav-links">
+    <li><a href="/">Inicio</a></li>
+    <li><a href="/recetas">Recetas</a></li>
+    <li><a href="/tags">Categorías</a></li>
+  </ul>
+</nav>
+
+<style>
+  
+  .nav-links {
+    list-style: none;
+     list-style-type: none;
+    display: none;
+    flex-direction: column;
+    flex-flow: column wrap;
+
+    flex-basis: 100%;
+    top: 5rem;
+    /* left: 48px; */
+    /* left: 0;*/
+    background-color: var(--color-2-light);
+
+    margin: 0;
+    padding: 0;
+  gap: 1.5rem;
+  align-items: center;
+  }
+
+  .nav-links a {
+    display: block;
+    text-align: center;
+    padding: 10px 0;
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    background-color: var(--color-2-light);
+  }
+
+  .nav-links a:hover,
+  .nav-links a:focus {
+    background-color: var(--color-2);
+    border-radius: 5px  ;
+  }
+
+  .expanded {
+    display: unset;
+    /*display: block;*/
+  }
+
+  @media screen and (min-width: 636px) {
+    .nav-links {
+      display: flex;
+      flex-direction: row;
+      margin-left: 5em;
+
+      position: static;
+      width: auto;
+      background: none;
+    }
+
+    .nav-links a {
+      display: inline-block;
+      padding: 15px 20px;
+      background-color: var(--bg-color);
+    }
+
+    .hamburger {
+      display: none;
+    }
+  }
+</style>

@@ -1,0 +1,28 @@
+---
+import BaseLayout from "./BaseLayout.astro";
+const { frontmatter } = Astro.props;
+---
+
+<BaseLayout pageTitle={`Po cocina: ${frontmatter.title}`}>
+  <div class="ficha-receta">
+    <slot />
+  </div>
+</BaseLayout>
+
+<style>
+  .ficha-receta {
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    margin: 20px auto;
+    padding: 20px 50px;
+    max-width: 95%;
+    font-family: "Courier New", Courier, monospace;
+    font-size: 1.25em;
+    font-weight: 500;
+    color: #111;
+    background-color: #fff;
+    border-radius: 20px;
+    box-shadow: 5px 5px 30px 3px var(--shadow-color);
+  }
+</style>
