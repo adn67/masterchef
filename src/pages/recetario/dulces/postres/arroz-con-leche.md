@@ -1,10 +1,10 @@
 ---
-layout: ../../../layouts/RecetaLayout.astro
+layout: ../../../../layouts/RecetaLayout.astro
 title: "Arroz con leche"
 category: "dulce"
-subcategory: "postre"
+subcategory: "postres"
 ingredients: ["arroz", "leche", "azúcar"]
-tags: ["postre", "arroz", "leche"]
+tags: ["postres", "arroz", "leche"]
 ---
 
 <!-- ## Arroz con leche -->

@@ -1,23 +1,26 @@
 ---
-layout: ../../../layouts/RecetaLayout.astro
-title: "Tarta de alcauciles"
-category: "salada"
-subcategory: "tarta"
-ingredients: ["alcauciles", "huevos", "aceite"]
-tags: ["tarta", "alcauciles"]
+layout: ../../../../layouts/RecetaLayout.astro
+title: "Budín de naranja"
+category: "dulce"
+subcategory: "tortas"
+ingredients: ["naranjas", "harina", "azúcar", "huevos", "aceite"]
+tags: ["tortas", "budines", "naranja"]
 ---
 
+<!-- ## Budín de naranja -->
 
 ### Ingredientes
 
-- alcauciles
-- etc.
-- etc.
-<br><br><br>
+- naranjas: 2
+- harina leudante: 2 tazas
+- azúcar: 1 taza
+- huevos: 3
+- aceite neutro (girasol o maíz): 1 taza
+  <br><br><br>
 
 ### Procedimiento
 
-1. Esta receta es falsa, sirve como prueba********
+1. Precalentar el horno a 180 °C
 
 2. Batir los huevos con el azúcar hasta lograr que estén espumosos y cremosos.
 3. Agregar una de las tazas de harina y revolver hasta unir completamente.

@@ -1,25 +1,60 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
+import "../../public/styles/lista-recetas.css";
+import "../../public/styles/global.css";
 const pageTitle = "Las recetas de Po";
-const listaSaladas = await Astro.glob("../pages/recetario/saladas/*.md");
+const listaSaladas = await Astro.glob("../pages/recetario/saladas/*/*.md");
+const listaPanes = await Astro.glob("../pages/recetario/saladas/panes/*.md");
+const listaPizzas = await Astro.glob("../pages/recetario/saladas/pizzas/*.md");
+const listaOtras = await Astro.glob("../pages/recetario/saladas/otras/*.md");
 
 // Astro.glob es una función asíncrona que retorna una promesa. Busca los archivos que cumplan con los criterios que pasemos como parámetros (en este caso, todas las recetas saladas).
 ---
 
-<!-- En esta página recetas.astro se listan los archivos .md que están en pages/recetario/saladas -->
 <BaseLayout pageTitle={pageTitle}>
-  <ul class="lista-recetas">
-    {
-      listaSaladas.map((receta) => (
-        <li>
-          <a href={receta.url}>{receta.frontmatter.title}</a>
-        </li>
-      ))
-    }
-  </ul>
+  <div class="container">
+    <h3 id="panes">Panes</h3>
+    <ul class="lista-recetas">
+      {
+        listaPanes.map((receta) => (
+          <li>
+            <a href={receta.url}>{receta.frontmatter.title}</a>
+          </li>
+        ))
+      }
+    </ul>
+
+    
+    <h3 id="pizza">Pizzas</h3>
+    <ul class="lista-recetas">
+      {
+        listaPizzas.map((receta) => (
+          <li>
+            <a href={receta.url}>{receta.frontmatter.title}</a>
+          </li>
+        ))
+      }
+    </ul>
+
+    <h3>Otras recetas saladas</h3>
+    <ul class="lista-recetas">
+      {
+        listaOtras.map((receta) => (
+          <li>
+            <a href={receta.url}>{receta.frontmatter.title}</a>
+          </li>
+        ))
+      }
+    </ul>
+  </div>
 </BaseLayout>
+>
 
 <style>
+  .container {
+    max-width: 80vw;
+    margin: 0 auto;
+  }
   .lista-recetas {
     list-style: none;
     margin-left: 1em;
@@ -28,8 +63,7 @@ const listaSaladas = await Astro.glob("../pages/recetario/saladas/*.md");
   a {
     text-decoration: none;
   }
-  a:hover{
+  a:hover {
     color: var(--txt-color);
   }
-
 </style>

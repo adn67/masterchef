@@ -1,0 +1,40 @@
+---
+import "/public/styles/global.css";
+---
+
+<div class="category">
+  <h3>Food Category</h3>
+  <p>TODO: Listar etiquetas que permitan buscar las recetas según categorías (ej.: postres, tortas, pizza).</p>
+  <p>De alguna manera hay que generar dinámicamente una etiqueta por cada carpeta contenedora de las recetas, cada una con un enlace hacia un componente que renderice las recetas correspondientes.</p>
+  <p>Mientras tanto, creo los listados de categorías de manera estática.</p>
+  <p>Ejemplo de etiquetas:</p>
+  <nav class="submenu">
+    <ul>
+      <li>postres</li>
+      <li>tortas</li>
+      <li>galletas</li>
+    </ul>
+  </nav>
+</div>
+
+<style>
+  h3 {
+    margin-top: 120px;
+  }
+  p{
+    margin-block: 15px;
+  }
+  .submenu ul {
+    display: flex;
+    margin-left: 5rem;
+    margin-bottom: 3em;
+    gap: 3em;
+  }
+  .submenu ul li {
+    list-style-type: none;
+    border: 2px solid var(--color-2);
+    padding: 2px 8px;
+    border-radius: 10px;
+    cursor: pointer;
+  }
+</style>

@@ -123,7 +123,10 @@ body {
     max-width: 90rem;
     padding: 0.75rem; */
 
-  width: min(90rem, 100%-1.5rem);
+/* width: min(90rem, 100%-1.5rem); */
+
+max-width: 1400px;
+ 
   line-height: 1.4;
 
   /*position: relative; */

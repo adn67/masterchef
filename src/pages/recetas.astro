@@ -1,0 +1,45 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import FoodCategory from "../components/FoodCategory.astro";
+import "../../public/styles/global.css";
+const pageTitle = "Las recetas de Po";
+
+const listaRecetas = await Astro.glob("../pages/recetario/*/*/*.md");
+
+// Astro.glob es una función asíncrona que retorna una promesa. Busca los archivos que cumplan con los criterios que pasemos como parámetros (en este caso, todas las recetas dulces).
+---
+
+<!-- En esta página recetas.astro se listan todos los archivos .md del recetario -->
+<BaseLayout pageTitle={pageTitle}>
+  <div class="container">
+    <h2>Todas las recetas</h2>
+    <h3>En esta página se muestran todas las recetas</h3><br>
+  <ul class="lista-recetas">
+    {
+      listaRecetas.map((receta) => (
+        <li>
+          <a href={receta.url}>{receta.frontmatter.title}</a> 
+        </li>
+      ))
+    }
+  </ul> <FoodCategory /></div>
+</BaseLayout>
+
+<style>
+.container{
+  max-width: 80vw;
+  margin: 0 auto;
+}
+  .lista-recetas {
+    list-style: none;
+    margin-left: 1em;
+  }
+
+  a {
+    text-decoration: none;
+  }
+  a:hover{
+    color: var(--txt-color);
+  }
+
+</style>

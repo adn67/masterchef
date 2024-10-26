@@ -1,37 +1,63 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
+import FoodCategory from "../components/FoodCategory.astro";
 import "../../public/styles/global.css";
+import "../../public/styles/lista-recetas.css";
 const pageTitle = "Las recetas de Po";
 
-const listaDulces = await Astro.glob("../pages/recetario/dulces/*.md");
+const listaDulces = await Astro.glob("../pages/recetario/dulces/*/*.md");
+const listaPostres = await Astro.glob("../pages/recetario/dulces/postres/*.md");
+const listaTortas = await Astro.glob("../pages/recetario/dulces/tortas/*.md");
+const listaGalletas = await Astro.glob(
+  "../pages/recetario/dulces/galletas/*.md"
+);
+const listaOtras = await Astro.glob("../pages/recetario/dulces/otras/*.md");
 
 // Astro.glob es una función asíncrona que retorna una promesa. Busca los archivos que cumplan con los criterios que pasemos como parámetros (en este caso, todas las recetas dulces).
 ---
 
-<!-- En esta página recetas.astro se listan los archivos .md que están en pages/recetario/dulces -->
 <BaseLayout pageTitle={pageTitle}>
+  <div class="container">
+    <h3 id="tortas">Tortas</h3>
+    <ul class="lista-recetas">
+      {
+        listaTortas.map((receta) => (
+          <li>
+            <a href={receta.url}>{receta.frontmatter.title}</a>
+          </li>
+        ))
+      }
+    </ul>
+    <h3 id="galletas">Galletas</h3>
+    <ul class="lista-recetas">
+      {
+        listaGalletas.map((receta) => (
+          <li>
+            <a href={receta.url}>{receta.frontmatter.title}</a>
+          </li>
+        ))
+      }
+    </ul><h3>Postres</h3>
+    <ul class="lista-recetas">
+      {
+        listaPostres.map((receta) => (
+          <li>
+            <a href={receta.url}>{receta.frontmatter.title}</a>
+          </li>
+        ))
+      }
+    </ul>
+
+  </ul><h3>Otras recetas dulces</h3>
   <ul class="lista-recetas">
     {
-      listaDulces.map((receta) => (
+      listaOtras.map((receta) => (
         <li>
           <a href={receta.url}>{receta.frontmatter.title}</a>
         </li>
       ))
     }
   </ul>
+  </div>
 </BaseLayout>
 
-<style>
-  .lista-recetas {
-    list-style: none;
-    margin-left: 1em;
-  }
-
-  a {
-    text-decoration: none;
-  }
-  a:hover{
-    color: var(--txt-color);
-  }
-
-</style>
