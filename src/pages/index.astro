@@ -35,9 +35,17 @@ const pageTitle = "Las recetas de Po"
 	  height: auto;
 	  /* transition: transform .75s;*/
 	}
-	img:hover {
-	  transform: scaleX(-1);
-	}
+	  /* Apply the flip transformation on hover and touch */
+	  img:hover, img:active {
+    transform: scaleX(-1);
+  }
+
+  /* Detect touch devices and apply the flip transformation */
+  @media (hover: none) {
+    img:active {
+      transform: scaleX(-1);
+    }
+  }
 	.food-categ {
 	  padding: 1em;
 	  text-align: center;
