@@ -136,7 +136,7 @@ max-width: 1400px;
     "header" auto
     "main" 1fr
     "footer" auto;
-  gap: 3em;
+  gap: 2.5em;
 }
 
 /* grid */
