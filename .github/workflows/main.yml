@@ -10,19 +10,22 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout code
+      - name: Check out the code
         uses: actions/checkout@v2
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: '16'
 
       - name: Install dependencies
         run: npm install
 
-      - name: Build
+      - name: Build the project
         run: npm run build
 
-      - name: Deploy
+      - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./build
-```[_{{{CITATION{{{_1{Guía de inicio rápido para GitHub Pages](https://docs.github.com/es/pages/quickstart)[_{{{CITATION{{{_2{Como automatizar el despliegue en GitHub-pages con Travis CI](https://www.freecodecamp.org/espanol/news/como-automatizar-el-despliegue-en-github-pages-con-travis-cl/)
-
+          publish_dir: ./dist
