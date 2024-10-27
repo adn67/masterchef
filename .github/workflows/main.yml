@@ -1,9 +1,9 @@
-name: Deploy to GitHub Pages
+name: GitHub Pages
 
 on:
   push:
     branches:
-      - main
+      - dev
 
 jobs:
   build:
@@ -13,19 +13,16 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
 
-      - name: Setup Node.js
-        uses: actions/setup-node@v2
-        with:
-          node-version: '16'
-
       - name: Install dependencies
-        run: npm ci
+        run: npm install
 
-      - name: Build Astro
+      - name: Build
         run: npm run build
 
-      - name: Deploy to GitHub Pages
-        uses: actions/deploy-pages@v1
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v3
         with:
-          folder: ./dist
-          target-folder: ./dist
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./build
+```[_{{{CITATION{{{_1{Guía de inicio rápido para GitHub Pages](https://docs.github.com/es/pages/quickstart)[_{{{CITATION{{{_2{Como automatizar el despliegue en GitHub-pages con Travis CI](https://www.freecodecamp.org/espanol/news/como-automatizar-el-despliegue-en-github-pages-con-travis-cl/)
+
