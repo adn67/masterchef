@@ -13,7 +13,6 @@ const listaRecetas = await Astro.glob("../pages/recetario/*/*/*.md");
 <BaseLayout pageTitle={pageTitle}>
   <div class="container">
     <h2>Todas las recetas</h2>
-    <h3>En esta página se muestran todas las recetas</h3><br>
   <ul class="lista-recetas">
     {
       listaRecetas.map((receta) => (
