@@ -1,31 +1,32 @@
-name: Deploy to GitHub Pages
+name: Deploy Astro site to GitHub Pages
 
 on:
   push:
     branches:
-      - dev
+      - dev  # Despliega desde la rama `dev`
 
 jobs:
   build:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v2
+      - name: Check out code
+        uses: actions/checkout@v3
 
-      - name: Setup Node.js
-        uses: actions/setup-node@v2
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
         with:
-          node-version: "20"
+          node-version: '20.5.1'  # Usar Node.js v20.5.1
 
       - name: Install dependencies
-        run: npm ci
+        run: npm install
 
-      - name: Build Astro
+      - name: Build the site
         run: npm run build
 
       - name: Deploy to GitHub Pages
-        uses: actions/deploy-pages@v1
+        uses: peaceiris/actions-gh-pages@v3
         with:
-          folder: ./dist
-          target-folder: ./dist
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: dist  # Directorio donde Astro genera el sitio
+          keep_files: false  # Opcional: borra archivos en cada despliegue para evitar conflictos
