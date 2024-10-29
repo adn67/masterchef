@@ -3,7 +3,7 @@ name: Deploy Astro site to GitHub Pages
 on:
   push:
     branches:
-      - dev  # Despliega desde la rama `dev`
+      - dev  # Rama de despliegue
 
 jobs:
   build:
@@ -24,9 +24,11 @@ jobs:
       - name: Build the site
         run: npm run build
 
+      - name: Disable Jekyll
+        run: echo > dist/.nojekyll
+
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: dist  # Directorio donde Astro genera el sitio
-          keep_files: false  # Opcional: borra archivos en cada despliegue para evitar conflictos
