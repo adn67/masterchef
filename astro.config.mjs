@@ -5,6 +5,6 @@ import { defineConfig } from "astro/config";
 
 export default defineConfig({
   site: 'https://adn67.github.io',
-  base: '/masterchef',
+  base: '/masterchef/',
   output: 'static',
 });
