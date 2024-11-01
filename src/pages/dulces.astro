@@ -46,15 +46,15 @@ const listaOtras = await Astro.glob("../pages/recetario/dulces/otras/*.md");
           </li>
         ))
       }
+    </ul><h3>Otras recetas dulces</h3>
+    <ul class="lista-recetas">
+      {
+        listaOtras.map((receta) => (
+          <li>
+            <a href={receta.url}>{receta.frontmatter.title}</a>
+          </li>
+        ))
+      }
     </ul>
-  </div><h3>Otras recetas dulces</h3>
-  <ul class="lista-recetas">
-    {
-      listaOtras.map((receta) => (
-        <li>
-          <a href={receta.url}>{receta.frontmatter.title}</a>
-        </li>
-      ))
-    }
-  </ul>
+  </div>
 </BaseLayout>
