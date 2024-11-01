@@ -47,8 +47,7 @@ const listaOtras = await Astro.glob("../pages/recetario/dulces/otras/*.md");
         ))
       }
     </ul>
-
-  </ul><h3>Otras recetas dulces</h3>
+  </div><h3>Otras recetas dulces</h3>
   <ul class="lista-recetas">
     {
       listaOtras.map((receta) => (
@@ -58,6 +57,4 @@ const listaOtras = await Astro.glob("../pages/recetario/dulces/otras/*.md");
       ))
     }
   </ul>
-  </div>
 </BaseLayout>
-

@@ -1,42 +1,45 @@
 ---
-import BaseLayout from "../layouts/BaseLayout.astro";
-import "../../public/styles/global.css"
-const pageTitle = "Las recetas de Po"
+import BaseLayout from "@/layouts/BaseLayout.astro";
+
+import "@public/styles/global.css"
+const pageTitle = "Las recetas de Po";
 ---
 
 <BaseLayout pageTitle={pageTitle}>
-	  <h1>{pageTitle}</h1>
-	<div class="flex">
-	  <div class="imagen">
-		<img
-		  src="images/The_Swedish_Chef.webp"
-		  alt="Swedish Chef from the Muppet's show"
-		/>
-	  </div>
-	  <div class="food-categ salados">
-		<a href="/saladas"><h2>platos salados</h2></a>
-		<a href="/saladas#panes"><h3>panes</h3></a>
-		<a href="/saladas#pizza"><h3>pizza</h3></a>
-		
-	  </div>
-	  <div class="food-categ dulces">
-		<a href="/dulces"><h2>platos dulces</h2></a>
-		<a href="/dulces#tortas"><h3>tortas</h3></a>
-		<a href="/dulces#galletas"><h3>galletas</h3></a>
-
-	  </div>
-	</div>
-  </BaseLayout>
+  <h1>{pageTitle}</h1>
+  <div class="flex">
+    <div class="imagen">
+      <img
+        src="images/The_Swedish_Chef.webp"
+        alt="Swedish Chef from the Muppet's show"
+      />
+    </div>
+    <div class="food-categ salados">
+      <a href="/src/pages/dulces"><h2>platos salados</h2></a>
+      <!-- decía: 
+      <a href="/saladas"><h2>platos salados</h2></a> -->
   
-  <style>
-	img {
-	  mask-image: linear-gradient(black 97%, transparent);
-	  max-width: 80%;
-	  height: auto;
-	  /* transition: transform .75s;*/
-	}
-	  /* Apply the flip transformation on hover and touch */
-	  img:hover, img:active {
+      <h3>panes</h3>
+      <h3>pizza</h3>
+    </div>
+    <div class="food-categ dulces">
+      <a href="/dulces"><h2>platos dulces</h2></a>
+      <h3>tortas</h3>
+      <h3>galletas</h3>
+    </div>
+  </div>
+</BaseLayout>
+
+<style>
+  img {
+    mask-image: linear-gradient(black 97%, transparent);
+    max-width: 80%;
+    height: auto;
+    /* transition: transform .75s;*/
+  }
+  /* Apply the flip transformation on hover and touch */
+  img:hover,
+  img:active {
     transform: scaleX(-1);
   }
 
@@ -46,48 +49,47 @@ const pageTitle = "Las recetas de Po"
       transform: scaleX(-1);
     }
   }
-	.food-categ {
-	  padding: 1em;
-	  text-align: center;
-	}
-	.food-categ a{
-		text-decoration: none;
-	}
-	.food-categ h2:hover{
-		color: var(--color-2);
-	}
-	.imagen {
-	  display: flex;
-	  justify-content: center;
-	  align-items: flex-end;
-	}
-	.flex {
-	  display: flex;
-	  flex-direction: column;
-	  max-width: 90%;
-	  margin: 0 auto;
-	}
-  
-	@media screen and (min-width: 636px) {
-	  /* probar: min-width: 40vw */
-	  .flex {
-		flex-direction: row;
-	  }
-  
-	  .imagen {
-		flex-grow: 1;
-		order: 2;
-	  }
-	  .food-categ {
-		margin-top: 3em;
-		flex-grow: 3;
-	  }
-	  .salados {
-		order: 0;
-	  }
-	  .dulces {
-		order: 2;
-	  }
-	}
-  </style>
-  
+  .food-categ {
+    padding: 1em;
+    text-align: center;
+  }
+  .food-categ a {
+    text-decoration: none;
+  }
+  .food-categ h2:hover {
+    color: var(--color-2);
+  }
+  .imagen {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+  }
+  .flex {
+    display: flex;
+    flex-direction: column;
+    max-width: 90%;
+    margin: 0 auto;
+  }
+
+  @media screen and (min-width: 636px) {
+    /* probar: min-width: 40vw */
+    .flex {
+      flex-direction: row;
+    }
+
+    .imagen {
+      flex-grow: 1;
+      order: 2;
+    }
+    .food-categ {
+      margin-top: 3em;
+      flex-grow: 3;
+    }
+    .salados {
+      order: 0;
+    }
+    .dulces {
+      order: 2;
+    }
+  }
+</style>
