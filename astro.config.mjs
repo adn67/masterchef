@@ -1,10 +1,11 @@
-// @ts-check
-import { defineConfig } from "astro/config";
+import { defineConfig } from 'astro/config';
+import dotenv from 'dotenv';
 
-// https://astro.build/config
+// Cargar variables de entorno
+dotenv.config();
 
 export default defineConfig({
-  site: 'https://adn67.github.io',
-  base: '/masterchef/',
+  site: process.env.ASTRO_SITE_URL || 'http://localhost:4321',
+  base: process.env.ASTRO_SITE_URL.includes('github.io') ? '/masterchef' : '/',
   output: 'static',
 });
