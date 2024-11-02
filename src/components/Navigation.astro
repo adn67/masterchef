@@ -1,12 +1,14 @@
 ---
  import "../../public/styles/global.css";
+ import "../../public/styles/global.css";
+ const siteUrl = process.env.ASTRO_SITE_URL || 'http://localhost:4321';
 ---
 
 <nav>
   <ul class="nav-links">
-    <li><a href={`${import.meta.env.ASTRO_SITE_URL}/`}>Inicio</a></li>
-    <li><a href={`${import.meta.env.ASTRO_SITE_URL}/saladas`}>Recetas saladas</a></li>
-    <li><a href={`${import.meta.env.ASTRO_SITE_URL}/dulces`}>Recetas dulces</a></li>
+    <li><a href={`${siteUrl}/`}>Inicio</a></li>
+    <li><a href={`${siteUrl}/saladas`}>Recetas saladas</a></li>
+    <li><a href={`${siteUrl}/dulces`}>Recetas dulces</a></li>
   </ul>
 </nav>
 
