@@ -1,20 +1,28 @@
+---
+const siteUrl = process.env.ASTRO_SITE_URL || "http://localhost:4321";
+---
+
 <div class="hamburger">
-    <button><img src="/images/burger.svg" class="hamburger"/></button>
-  </div>
+  <button
+    ><img src={`${siteUrl}//images/burger.svg`} class="hamburger" /></button
+  >
+</div>
 
 <style>
-button{background-color: transparent;
-border-style: hidden;
-padding: .5rem;}
+  button {
+    background-color: transparent;
+    border-style: hidden;
+    padding: 0.5rem;
+  }
 
-.hamburger {
+  .hamburger {
     display: inline-block;
     cursor: pointer;
-}
-
-@media screen and (min-width: 636px) {
-  .hamburger {
-        display: none;
   }
-}
+
+  @media screen and (min-width: 636px) {
+    .hamburger {
+      display: none;
+    }
+  }
 </style>

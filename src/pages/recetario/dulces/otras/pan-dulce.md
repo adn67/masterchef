@@ -15,7 +15,7 @@ tags: ["pan"]
 - huevos: 5
 - agua tibia: 125 ml
 - leche tibia: 125 ml
-- cucharadas de miel: 3 cucharadas
+- miel: 3 cucharadas
 - esencia de vainilla
 - extracto de malta (opcional)
 - frutas secas/chips de chocolate

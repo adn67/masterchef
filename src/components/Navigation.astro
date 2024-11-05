@@ -1,7 +1,7 @@
 ---
- import "../../public/styles/global.css";
- import "../../public/styles/global.css";
- const siteUrl = process.env.ASTRO_SITE_URL || 'http://localhost:4321';
+import "../../public/styles/global.css";
+import "../../public/styles/global.css";
+const siteUrl = process.env.ASTRO_SITE_URL || "http://localhost:4321";
 ---
 
 <nav>
@@ -13,10 +13,9 @@
 </nav>
 
 <style>
-  
   .nav-links {
     list-style: none;
-     list-style-type: none;
+    list-style-type: none;
     display: none;
     flex-direction: column;
     flex-flow: column wrap;
@@ -29,8 +28,8 @@
 
     margin: 0;
     padding: 0;
-  gap: 1.5rem;
-  align-items: center;
+    gap: 1.5rem;
+    align-items: center;
   }
 
   .nav-links a {
@@ -42,7 +41,6 @@
     font-weight: bold;
     text-transform: uppercase;
     background-color: var(--color-2-light);
-   
   }
 
   .nav-links a:hover,
