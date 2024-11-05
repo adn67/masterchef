@@ -13,60 +13,69 @@ const listaOtras = await Astro.glob("../pages/recetario/saladas/otras/*.md");
 
 <BaseLayout pageTitle={pageTitle}>
   <div class="container">
-    <h3 id="panes">Panes</h3>
-    <ul class="lista-recetas">
-      {
-        listaPanes.map((receta) => (
-          <li>
-            <a href={receta.url}>{receta.frontmatter.title}</a>
-          </li>
-        ))
-      }
-    </ul>
-
-    
-    <h3 id="pizza">Pizzas</h3>
-    <ul class="lista-recetas">
-      {
-        listaPizzas.map((receta) => (
-          <li>
-            <a href={receta.url}>{receta.frontmatter.title}</a>
-          </li>
-        ))
-      }
-    </ul>
-
-    <h3>Otras recetas saladas</h3>
-    <ul class="lista-recetas">
-      {
-        listaOtras.map((receta) => (
-          <li>
-            <a href={receta.url}>{receta.frontmatter.title}</a>
-          </li>
-        ))
-      }
-    </ul>
+    <section>
+      <h3 id="panes">Panes</h3>
+      <ul class="lista-recetas">
+        {
+          listaPanes.map((receta) => (
+            <li>
+              <a href={receta.url}>{receta.frontmatter.title}</a>
+            </li>
+          ))
+        }
+      </ul>
+    </section>
+    <section>
+      <h3 id="pizza">Pizzas</h3>
+      <ul class="lista-recetas">
+        {
+          listaPizzas.map((receta) => (
+            <li>
+              <a href={receta.url}>{receta.frontmatter.title}</a>
+            </li>
+          ))
+        }
+      </ul>
+    </section>
+    <section>
+      <h3>Otras recetas saladas</h3>
+      <ul class="lista-recetas">
+        {
+          listaOtras.map((receta) => (
+            <li>
+              <a href={receta.url}>{receta.frontmatter.title}</a>
+            </li>
+          ))
+        }
+      </ul>
+    </section>
   </div>
 </BaseLayout>
 
-
 <style>
-
   .container {
-      max-width: 80vw;
-      margin: 0 auto;
-    }
-    .lista-recetas {
-      list-style: none;
-      margin-left: 1em;
-      margin-bottom: 3em;
-    }
-  
-    a {
-      text-decoration: none;
-      font-size: 1.4em;
-    }
-    a:hover {
-      color: var(--txt-color);
-    }
-  </style>
+    max-width: 80vw;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
+    column-gap: 5em;
+    row-gap: 4em;
+    flex-wrap: wrap;
+  }
+  .lista-recetas {
+    list-style: none;
+    margin-left: 1em;
+    margin-bottom: 3em;
+    min-width: 40ch;
+    background-color: rgb(255, 255, 255, .6);
+    padding: 1em 2em;
+    border-radius: 15px;
+  }
+  a {
+    text-decoration: none;
+    font-size: 1.4em;
+  }
+  a:hover {
+    color: var(--txt-color);
+  }
+</style>

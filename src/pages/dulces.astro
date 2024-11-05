@@ -18,6 +18,7 @@ const listaOtras = await Astro.glob("../pages/recetario/dulces/otras/*.md");
 
 <BaseLayout pageTitle={pageTitle}>
   <div class="container">
+    <section>
     <h3 id="tortas">Tortas</h3>
     <ul class="lista-recetas">
       {
@@ -28,6 +29,9 @@ const listaOtras = await Astro.glob("../pages/recetario/dulces/otras/*.md");
         ))
       }
     </ul>
+  </section>
+
+<section>
     <h3 id="galletas">Galletas</h3>
     <ul class="lista-recetas">
       {
@@ -37,7 +41,11 @@ const listaOtras = await Astro.glob("../pages/recetario/dulces/otras/*.md");
           </li>
         ))
       }
-    </ul><h3>Postres</h3>
+    </ul>
+  </section>  
+    
+<section> 
+    <h3>Postres</h3>
     <ul class="lista-recetas">
       {
         listaPostres.map((receta) => (
@@ -46,7 +54,10 @@ const listaOtras = await Astro.glob("../pages/recetario/dulces/otras/*.md");
           </li>
         ))
       }
-    </ul><h3>Otras recetas dulces</h3>
+    </ul>
+  </section>  
+<section>  
+    <h3>Otras recetas dulces</h3>
     <ul class="lista-recetas">
       {
         listaOtras.map((receta) => (
@@ -56,6 +67,7 @@ const listaOtras = await Astro.glob("../pages/recetario/dulces/otras/*.md");
         ))
       }
     </ul>
+  </section>
   </div>
 </BaseLayout>
 
@@ -65,11 +77,20 @@ const listaOtras = await Astro.glob("../pages/recetario/dulces/otras/*.md");
 .container {
     max-width: 80vw;
     margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
+    column-gap: 5em;
+    row-gap: 4em;
+    flex-wrap: wrap;
   }
   .lista-recetas {
     list-style: none;
-    margin-left: 1em;
+    /* margin-left: 1em; */
     margin-bottom: 3em;
+    min-width: 40ch;
+    background-color: rgb(255, 255, 255, .6);
+    padding: 1em 2em;
+    border-radius: 15px;
   }
 
   a {
