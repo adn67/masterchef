@@ -32,15 +32,17 @@ const siteUrl = process.env.ASTRO_SITE_URL || "http://localhost:4321";
 
     <Footer />
     <!-- <script src="../scripts/menu.js"></script> -->
-    <script src={`script.js?v=${Date.now()}`}>
+    <!-- <script>
       const hamburger = document.querySelector(".hamburger");
       const navLinks = document.querySelector(".nav-links");
+
     
       if (hamburger && navLinks) {
         hamburger.addEventListener("click", () => {
           navLinks.classList.toggle("expanded");
         });
       }
-    </script>
+    </script> -->
+    <script> document.addEventListener('DOMContentLoaded', () => { const hamburger = document.querySelector(".hamburger"); const navLinks = document.querySelector(".nav-links"); if (hamburger && navLinks) { hamburger.addEventListener("click", () => { navLinks.classList.toggle("expanded"); }); } }); </script>
   </body>
 </html>
