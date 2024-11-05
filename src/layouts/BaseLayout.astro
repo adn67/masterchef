@@ -32,10 +32,10 @@ const siteUrl = process.env.ASTRO_SITE_URL || "http://localhost:4321";
 
     <Footer />
     <!-- <script src="../scripts/menu.js"></script> -->
-    <script>
+    <script src={`script.js?v=${Date.now()}`}>
       const hamburger = document.querySelector(".hamburger");
       const navLinks = document.querySelector(".nav-links");
-
+    
       if (hamburger && navLinks) {
         hamburger.addEventListener("click", () => {
           navLinks.classList.toggle("expanded");
