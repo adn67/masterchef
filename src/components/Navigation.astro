@@ -6,7 +6,12 @@ const siteUrl = process.env.ASTRO_SITE_URL || "http://localhost:4321";
 
 <nav>
   <ul class="nav-links">
-    <li><a href={`${siteUrl}/`}>Inicio</a></li>
+    <!-- <li><a href={`${siteUrl}/`}>Inicio</a></li> -->
+    <li class="link-logo">
+      <a href={`${siteUrl}/`}
+        ><img src={`${siteUrl}/favicon.svg`} alt="gorro de cocinero" /></a>
+    </li>
+    <li class="link-home"><a href={`${siteUrl}/`}>Inicio</a></li>
     <li><a href={`${siteUrl}/saladas`}>Recetas saladas</a></li>
     <li><a href={`${siteUrl}/dulces`}>Recetas dulces</a></li>
   </ul>
@@ -50,6 +55,10 @@ const siteUrl = process.env.ASTRO_SITE_URL || "http://localhost:4321";
     color: var(--title-color);
   }
 
+  .link-logo {
+    display: none;
+  }
+
   .expanded {
     display: unset;
     /*display: block;*/
@@ -72,6 +81,12 @@ const siteUrl = process.env.ASTRO_SITE_URL || "http://localhost:4321";
       background-color: var(--bg-color);
     }
 
+    .link-home {
+      display: none;
+    }
+    .link-logo{
+      display: block;
+    }
     .hamburger {
       display: none;
     }

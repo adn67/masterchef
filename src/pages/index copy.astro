@@ -14,11 +14,18 @@ const pageTitle = "Las recetas de Po";
         alt="Swedish Chef from the Muppet's show"
       />
     </div>
-    <div class="food-categ">
-      <ul>
-        <li class="link-categ"><a href={`${import.meta.env.ASTRO_SITE_URL}/saladas`}>platos salados</a></li>
-        <li class="link-categ"><a href={`${import.meta.env.ASTRO_SITE_URL}/dulces`}>platos dulces</a></li>
-      </ul>      
+    <div class="food-categ salados">
+      <a href={`${import.meta.env.ASTRO_SITE_URL}/saladas`}><h2>platos salados</h2></a>
+      <!-- decía:
+      <a href="/saladas"><h2>platos salados</h2></a> -->
+  
+      <h3>panes</h3>
+      <h3>pizza</h3>
+    </div>
+    <div class="food-categ dulces">
+      <a href={`${import.meta.env.ASTRO_SITE_URL}/dulces`}><h2>platos dulces</h2></a>
+      <h3>tortas</h3>
+      <h3>galletas</h3>
     </div>
   </div>
 </BaseLayout>
@@ -35,17 +42,7 @@ const pageTitle = "Las recetas de Po";
   img:active {
     transform: scaleX(-1);
   }
-.link-categ{
-  display: block;
-  list-style: none;
-  font-size: 2em;
-  border: 1px solid var(--title-color);
-  border-radius: 10px;
-  margin-top: 10px;
-  padding: 2px;
-  background-color: rgb(255, 255, 255, 0.6);
 
-}
   /* Detect touch devices and apply the flip transformation */
   @media (hover: none) {
     img:active {
@@ -59,9 +56,8 @@ const pageTitle = "Las recetas de Po";
   .food-categ a {
     text-decoration: none;
   }
-  .food-categ a:hover {
+  .food-categ h2:hover {
     color: var(--color-2);
-    border-color: var(--color-2);
   }
   .imagen {
     display: flex;
@@ -77,14 +73,23 @@ const pageTitle = "Las recetas de Po";
 
   @media screen and (min-width: 636px) {
     /* probar: min-width: 40vw */
-    
+    .flex {
+      flex-direction: row;
+    }
 
     .imagen {
       flex-grow: 1;
+      order: 2;
     }
     .food-categ {
-      display: none;
+      margin-top: 3em;
+      flex-grow: 3;
     }
-   
+    .salados {
+      order: 0;
+    }
+    .dulces {
+      order: 2;
+    }
   }
 </style>

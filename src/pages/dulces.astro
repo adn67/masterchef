@@ -1,6 +1,5 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
-import FoodCategory from "../components/FoodCategory.astro";
 import "../../public/styles/global.css";
 import "../../public/styles/lista-recetas.css";
 const pageTitle = "Las recetas de Po";
@@ -8,9 +7,7 @@ const pageTitle = "Las recetas de Po";
 const listaDulces = await Astro.glob("../pages/recetario/dulces/*/*.md");
 const listaPostres = await Astro.glob("../pages/recetario/dulces/postres/*.md");
 const listaTortas = await Astro.glob("../pages/recetario/dulces/tortas/*.md");
-const listaGalletas = await Astro.glob(
-  "../pages/recetario/dulces/galletas/*.md"
-);
+const listaGalletas = await Astro.glob("../pages/recetario/dulces/galletas/*.md");
 const listaOtras = await Astro.glob("../pages/recetario/dulces/otras/*.md");
 
 // Astro.glob es una función asíncrona que retorna una promesa. Busca los archivos que cumplan con los criterios que pasemos como parámetros (en este caso, todas las recetas dulces).
@@ -19,80 +16,73 @@ const listaOtras = await Astro.glob("../pages/recetario/dulces/otras/*.md");
 <BaseLayout pageTitle={pageTitle}>
   <div class="container">
     <section>
-    <h3 id="tortas">Tortas</h3>
-    <ul class="lista-recetas">
-      {
-        listaTortas.map((receta) => (
-          <li>
-            <a href={receta.url}>{receta.frontmatter.title}</a>
-          </li>
-        ))
-      }
-    </ul>
-  </section>
+      <h3 id="tortas">Tortas</h3>
+      <ul class="lista-recetas">
+        {
+          listaTortas.map((receta) => (
+            <li>
+              <a href={receta.url}>{receta.frontmatter.title}</a>
+            </li>
+          ))
+        }
+      </ul>
+    </section>
 
-<section>
-    <h3 id="galletas">Galletas</h3>
-    <ul class="lista-recetas">
-      {
-        listaGalletas.map((receta) => (
-          <li>
-            <a href={receta.url}>{receta.frontmatter.title}</a>
-          </li>
-        ))
-      }
-    </ul>
-  </section>  
-    
-<section> 
-    <h3>Postres</h3>
-    <ul class="lista-recetas">
-      {
-        listaPostres.map((receta) => (
-          <li>
-            <a href={receta.url}>{receta.frontmatter.title}</a>
-          </li>
-        ))
-      }
-    </ul>
-  </section>  
-<section>  
-    <h3>Otras recetas dulces</h3>
-    <ul class="lista-recetas">
-      {
-        listaOtras.map((receta) => (
-          <li>
-            <a href={receta.url}>{receta.frontmatter.title}</a>
-          </li>
-        ))
-      }
-    </ul>
-  </section>
+    <section>
+      <h3 id="galletas">Galletas</h3>
+      <ul class="lista-recetas">
+        {
+          listaGalletas.map((receta) => (
+            <li>
+              <a href={receta.url}>{receta.frontmatter.title}</a>
+            </li>
+          ))
+        }
+      </ul>
+    </section>
+
+    <section>
+      <h3>Postres</h3>
+      <ul class="lista-recetas">
+        {
+          listaPostres.map((receta) => (
+            <li>
+              <a href={receta.url}>{receta.frontmatter.title}</a>
+            </li>
+          ))
+        }
+      </ul>
+    </section>
+    <section>
+      <h3>Otras recetas dulces</h3>
+      <ul class="lista-recetas">
+        {
+          listaOtras.map((receta) => (
+            <li>
+              <a href={receta.url}>{receta.frontmatter.title}</a>
+            </li>
+          ))
+        }
+      </ul>
+    </section>
   </div>
 </BaseLayout>
 
-
 <style>
-
-.container {
+  .container {
     max-width: 80vw;
     margin: 0 auto;
-    display: flex;
-    justify-content: space-around;
-    column-gap: 5em;
-    row-gap: 4em;
-    flex-wrap: wrap;
+    
   }
   .lista-recetas {
     list-style: none;
-    /* margin-left: 1em; */
+    margin-left: 1em;
     margin-bottom: 3em;
     min-width: 40ch;
-    background-color: rgb(255, 255, 255, .6);
-    padding: 1em 2em;
+    background-color: rgb(255, 255, 255, 0.6);
+    padding: 1em 1.5em;
     border-radius: 15px;
   }
-
   a {
     text-decoration: none;
     font-size: 1.4em;
