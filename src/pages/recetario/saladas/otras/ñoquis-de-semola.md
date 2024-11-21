@@ -22,6 +22,4 @@ tags: ["ñoquis", "sémola"]
 
 ### Procedimiento
 
-[Ver en YouTube](https://youtu.be/tfGcwgU3vBc)
-
-[El enlace te lleva fuera de este sitio. ¡Volvé pronto!]
+<a href="https://youtu.be/tfGcwgU3vBc" target="_blank" rel="noopener noreferrer">ver video en YouTube</a>
