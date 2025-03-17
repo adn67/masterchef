@@ -1,6 +1,6 @@
 ---
 layout: ../../../../layouts/RecetaLayout.astro
-title: "Crema pastelera"
+title: "Crema pastelera (microondas)"
 category: "dulce"
 subcategory: "otras"
 ingredients: ["leche", "azúcar", "huevos", "manteca", "maicena"]
