@@ -24,6 +24,7 @@ tags: ["crema"]
 4. Calentar la leche hasta que veamos muchas burbujas (aproximadamente 95 °C).
 5. Verter la leche caliente sobre la primera mezcla, revolver enérgicamente.
 6. Espesará luego de unos segundos. Si no espesa, colocarla al fuego por un minuto.
+<br><br><br>
 
 ### Explicación científica 🤓
 
