@@ -3,7 +3,7 @@ layout: ../../../../layouts/RecetaLayout.astro
 title: "Torta de chocolate sin harina"
 category: "dulce"
 subcategory: "tortas"
-ingredients: ["chocolate", "peras]
+ingredients: ["chocolate", "peras"]
 tags: ["tortas", "chocolate"]
 ---
 
