@@ -22,6 +22,6 @@ tags: ["tortas", "chocolate"]
 3. Colarlas y procesarlas para obtener un puré.
 4. Agregar al puré de peras el chocolate fundido.
 5. Volcar ⅔ de la preparación en un molde forrado en papel para horno.
-6. Cocinar en horno precalentado a 180 °C durante 25-30 minutos.
+6. Cocinar en horno a 180 °C durante 25-30 minutos.
 7. Retirar del horno y cubrir con el tercio restante de la mezcla de puré de peras y chocolate.
 8. Llevar a la heladera.
