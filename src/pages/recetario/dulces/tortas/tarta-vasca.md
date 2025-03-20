@@ -3,7 +3,7 @@ layout: ../../../../layouts/RecetaLayout.astro
 title: "Tarta vasca"
 category: "dulce"
 subcategory: "tortas"
-ingredients: ["queso crema", "crema", "huevos", "azúcar"]
+ingredients: ["queso crema", "crema", "huevos", "azúcar", "maicena"]
 tags: ["tortas", "queso"]
 ---
 
