@@ -17,6 +17,7 @@ Receta para 6 grandes o 12 chiquitos
 - sal: 1 cucharadita
 - aceite: 1 pocillo
 - agua fría: ¾ tazas
+
 <br><br><br>
 
 ### Procedimiento
