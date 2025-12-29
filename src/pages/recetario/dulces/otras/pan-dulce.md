@@ -9,7 +9,7 @@ tags: ["pan"]
 
 ### Ingredientes
 
-- harina leudante: 1 kg
+- harina con levadura: 1 kg
 - manteca: 200 g
 - azúcar: 200 g
 - huevos: 5
@@ -23,4 +23,4 @@ tags: ["pan"]
 
 ### Procedimiento
 
-Cocinar en horno a 170 °C durante aproximadamente 40 minutos
+Cocinar en horno mínimo durante aproximadamente 60 minutos, hasta que el interior del pan dulce alcance 90 °C
