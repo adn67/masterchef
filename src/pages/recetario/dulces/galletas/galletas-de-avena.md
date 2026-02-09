@@ -13,8 +13,8 @@ tags: ["galletas", "avena"]
 
 - manteca: 100 g
 - huevos: 2
-- azúcar: ¾ de taza
-- avena: 3 tazas
-- harina leudante: 1½ taza
+- azúcar: 150 g (¾ de taza)
+- avena: 250 g (3 tazas)
+- harina leudante: 180 g (1½ taza)
 - esencia de vainilla, canela (opcional)
 <br><br><br>
