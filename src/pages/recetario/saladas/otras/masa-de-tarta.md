@@ -9,7 +9,7 @@ tags: ["masa", "tarta", "masa de tarta"]
 
 <!-- ## Masa de tarta -->
 
-Receta para 6 grandes o 12 chiquitos
+Receta para dos tapas medianas o una grande.
 
 ### Ingredientes
 
