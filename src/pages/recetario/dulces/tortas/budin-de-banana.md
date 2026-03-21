@@ -20,11 +20,11 @@ tags: ["tortas", "budines", "banana"]
 
 ### Procedimiento
 
-1. Pisar las bananas.
-2. Mezclar la harina y el azúcar.
-3. Agregar el puré de banana.
-4. Agregar el aceite.
+1. Pisar las bananas con el azúcar. Sugerencia: ponerlas 30 segundos en el microondas. También es práctico hacer el puré de bananas con la minipímer. Opción: puede reemplazarse parte del azúcar por una cucharada de miel.
+2. Encender el horno a temperatura mínima para precalentarlo.
+3. Agregar el aceite al puré de bananas (integrarlo suavemente con la minipímer).
+4. Agregar la harina (tamizándola). Mezclar con cuchara para integrarla al resto. Opcional: puede agregarse canela o un poco de café a la harina.
 5. Si se desea, agregar nueces o chips de chocolate.
-6. Poner en un molde enmantecado.
-7. Espolvorear con canela.
-8. Cocinar en horno mínimo, durante 45 minutos a 1 hora.
+6. Poner en un molde aceitado o enmantecado.
+7. Opcional: espolvorear con canela o azúcar negra.
+8. Cocinar en horno mínimo, durante 45 minutos a 1 hora. En el horno Volcán de casa, va bien con la marca de la perilla en sentido vertical.
