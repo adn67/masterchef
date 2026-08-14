@@ -46,12 +46,12 @@ tags: ["tortas", "ricota"]
 4. Terminar de unir los ingredientes con la mano, sin amasar demasiado para que la masa no se endurezca.
 5. Dividir la masa en dos porciones (una más grande que la otra).
 6. Dejar descansar la masa en la heladera (sugerencia: dejarla ya aplastada, entre separadores).
-
+ <br><br><br>
 ### 2) Relleno
 
 1. Colocar en un bol la ricota, la crema (o queso untable), el azúcar, la vainilla, la ralladura de limón y las 2 claras.
 2. Mezclar los ingredientes.
-
+ <br><br><br>
 ### 3) Armado de la tarta
 
 1. Precalentar el horno.
