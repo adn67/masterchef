@@ -35,10 +35,10 @@ tags: ["tortas", "ricota"]
 
 - Molde de 24 cm de diámetro.
 - Importante: todos los ingredientes deben estar a temperatura ambiente para evitar que se corte la manteca.
-
+  <br><br><br>
 ### Procedimiento
 
-#### Masa
+### 1) Masa
 
 1. Colocar en un bol la manteca (blanda), la vainilla, la ralladura de limón y el azúcar. Incorporar hasta obtener una mezcla cremosa.
 2. Agregar el huevo y las 2 yemas. Mezclar para incorporar.
@@ -47,12 +47,12 @@ tags: ["tortas", "ricota"]
 5. Dividir la masa en dos porciones (una más grande que la otra).
 6. Dejar descansar la masa en la heladera (sugerencia: dejarla ya aplastada, entre separadores).
 
-#### Relleno
+### 2) Relleno
 
 1. Colocar en un bol la ricota, la crema (o queso untable), el azúcar, la vainilla, la ralladura de limón y las 2 claras.
 2. Mezclar los ingredientes.
 
-#### Armado de la tarta
+### 3) Armado de la tarta
 
 1. Precalentar el horno.
 2. Retirar la masa de la heladera.
